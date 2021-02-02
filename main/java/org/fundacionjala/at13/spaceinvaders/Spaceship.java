@@ -1,18 +1,19 @@
 package org.fundacionjala.at13.spaceinvaders;
-
+import java.lang.Math;
 public class Spaceship {
 
     private int posX;
     private int posY;
-    private final int LOWER_lIMIT=0;
-    private final int UPPER_lIMIT=50;
+    private int LOWER_lIMIT=0;
+    private int UPPER_lIMIT=50;
     
 
     public Spaceship(int posX, int posY) {
         this.posX = posX;
         this.posY = posY;
+        Matrix nes= new Matrix();
+        UPPER_lIMIT=nes.getMATRIX_WIDTH(); 
     }
-
 
     public int getPosX() {
         return this.posX;
@@ -63,5 +64,13 @@ public class Spaceship {
     }
     public String shoot(){
         return ">>>>>>> piw <<<<<<< shoot position: "+getPosX()+","+getPosY();
+    }
+    public void movimentPlayer(){
+        int random = (int)(Math.random()*100);
+        if(random < 50){
+            moveToLeft();
+        }else{
+            moveToLeft();
+        }  
     }
 }

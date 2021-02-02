@@ -2,18 +2,18 @@ package org.fundacionjala.at13.spaceinvaders;
 import org.fundacionjala.at13.spaceinvaders.Alien;
 
 public class Matrix {
-    public static final int MATRIX_HEIGHT = 3;
-    public static final int MATRIX_WIDTH = 3;
+    public static final int MATRIX_HEIGHT = 50;
+    public static final int MATRIX_WIDTH = 100;
     public int[][] space;
     public Alien firstAlien = new Alien();
 
     public Matrix(){
         this.space = new int[MATRIX_HEIGHT][MATRIX_WIDTH];
         fillMatrix();
-        showMatrix();
-        firstAlien.moveRight();
-        fillMatrix();
-        showMatrix();
+        //showMatrix();
+       // firstAlien.moveRight();
+       // fillMatrix();
+      //  showMatrix();
     }
 
     public void fillMatrix() {
@@ -36,5 +36,11 @@ public class Matrix {
             System.out.println("");
         }
         System.out.println("\n");
+    }
+    public int getMATRIX_WIDTH(){
+        return MATRIX_WIDTH;
+    }
+    public int getMATRIX_HEIGHT(){
+        return MATRIX_HEIGHT;
     }
 }
